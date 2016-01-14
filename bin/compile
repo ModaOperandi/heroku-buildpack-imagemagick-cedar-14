@@ -27,14 +27,7 @@ mkdir -p "$APT_STATE_DIR/lists/partial"
 
 APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR -o Dir::Etc::SourceList=$SOURCE_LIST"
 
-
-# clear any previous sudo permission
-su -k
-# run inside sudo
-su sh <<SCRIPT
-# -- adding ubunut key
-apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
-SCRIPT
+#apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
 
 #http://extras.ubuntu.com trusty Release: The following signatures couldn't 
 #be verified because the public key is not available: NO_PUBKEY 16126D3A3E5C1192
