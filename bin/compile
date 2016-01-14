@@ -28,8 +28,8 @@ mkdir -p "$APT_STATE_DIR/lists/partial"
 APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR -o Dir::Etc::SourceList=$SOURCE_LIST"
 
 #apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
-gpg --keyserver keyserver.ubuntu.com --recv 16126D3A3E5C1192
-gpg --export --armor 16126D3A3E5C1192
+# gpg --keyserver keyserver.ubuntu.com --recv 16126D3A3E5C1192
+# gpg --export --armor 16126D3A3E5C1192
 
 #gpg --export --armor 16126D3A3E5C1192 | sudo apt-key add -
 
